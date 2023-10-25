@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <link rel="stylesheet"  type="text/css" href="css/index.css">
+    <meta charset="UTF-8">
+    <title>Binomial Computation</title>
+</head>
+<body>
+    <header>
+        <div>
+            Logo
+        </div>
+        <div>
+            Menu
+        </div>
+    </header>
+    <div id="theWhole">
+        <div id="theMiddle">
+            <p><span>Definition</span> A <span>binamial experiment</span>
+                is one that has these five characteristics:
+            </p><br>
+            <ol>
+                <li>The experiment consists of n identical trials.</li>
+                <li>Each trial results in one of two outcomes. For lack of a better name, the one out-
+                come is called a success, S, and the other a failure, F.</li>
+                <li>The probability of success on a single trial is equal to p and remains the same
+                from trial to trial. The probability of failure is equal to (1-p) = q.</li>
+                <li>The trials are independent.</li>
+                <li>We are interested in x, the number of successes observed during the n trials,
+                for x = 0, 1, 2, . . . , n.</li>
+            </ol>
+            <div id="box-calculator">
+                <ul>
+                    <li class="uli"> # Enter a value in each of the first three text boxes (the unshaded boxes).</li>
+                    <li class="uli"> # Click the Calculate button to compute binomial probabilities</li>
+                </ul>
+                <div>
+                    <form id="myform">
+                        <div id="labels">
+                        <span>Probability of success on a trial</span><br>
+                        <span>Number of trials</span><br>
+                        <span>Number of successes (x)</span><br>
+                        <span>Binomial Distribution</span><br>
+                        <span>Mean </span><br>
+                        <span>Variance </span><br>
+                        <span>Standard Deviation </span><br>
+                        </div>
+
+
+                        <div id="input-fields">
+                        <input type="text"  class="first-box" id="probabilityOfSuccessOnEachTrial">
+                        <input type="text"  class="first-box" id="numberOfTrial">
+                        <input type="text"  class="first-box" id="numberOfSuccess">
+                        <input type="text"  class="first-box" id="binomialDistribution" disabled>
+                        <input type="text"  class="first-box" id="mean" disabled>
+                        <input type="text"  class="first-box" id="variance" disabled>
+                        <input type="text"  class="first-box" id="standardDeviation" disabled>
+                        </div>
+                    </form>
+                    <button type="button" onclick="calculateBinomial()">Calculate</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+<script type="text/javascript" th:src="@{/js/index.js}"></script>
+</body>
+</html>
